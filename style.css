@@ -34,8 +34,9 @@ nav a{
     font-weight: 400;
 }
 nav a:hover{
-    background-color: rgba(63, 29, 143, 0.5);
+    background-color: white;
     cursor: pointer;
+    color: red;
 }
 
 #welcome{
@@ -65,19 +66,54 @@ nav a:hover{
 }
 #project-section{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
     grid-gap: 20px;
-    grid-template-areas: 
-    "project1 project2 project3"
-    "project3 project4 project5"
-    ;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+h3{
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    grid-column: 1 /-1;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 2px solid tomato;
 
 }
-#project1{
-    grid-area: project1;
+.project {
+    cursor: pointer;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
-#project2{
-    grid-area: project2;
+.project h2 {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+
+}
+.project p{
+    text-align: start;
+    padding: .5rem;
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-style: italic;
+    line-height: 1.5;
+}
+.project a{
+    color: white;
+    font-size: 1.4rem;
+    padding: .4rem;
+    margin-top: 1.7rem;
+    border: 1px solid white;
+}
+.project a:hover{
+    background-color: white;
+    cursor: pointer;
+    color: red;
 }
 img{
     width: 100%;
