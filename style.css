@@ -63,11 +63,21 @@ nav a:hover{
 #welcome li{
   padding: .5rem;
 }
-#main-section{
+#project-section{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     grid-gap: 20px;
+    grid-template-areas: 
+    "project1 project2 project3"
+    "project3 project4 project5"
+    ;
 
+}
+#project1{
+    grid-area: project1;
+}
+#project2{
+    grid-area: project2;
 }
 img{
     width: 100%;
