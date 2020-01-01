@@ -4,39 +4,37 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
 body{
     background-color: rgba(6, 6, 7, 0.5);
-    width: 100%;
-    height: 100%;
 }
 
 header{
-    background-color: brown;
-    min-height: 6rem;
+    background-color: rgba(135, 129, 145, 0.897);
+    min-height: 80px;
     text-align: center;
     
 }
 nav ul{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
     
 }
 nav li{
-    padding: .8rem;
-    margin-right: 2rem;
-    margin-top: .5rem;
+    padding:0 1rem;
 }
 nav a{
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2rem;
-    font-weight: 400;
+    font-size: 1.4rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
 }
 nav a:hover{
-    background-color: white;
-    cursor: pointer;
-    color: red;
+    border-bottom: 2px solid brown;
 }
 
 #welcome{
@@ -50,77 +48,84 @@ nav a:hover{
     flex-direction: column;
 }
 #welcome h1{
-    font-size: 3rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
     padding: 2rem;
 }
 #welcome p{
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: sienna;
     font-style: italic;
-    padding-top: -1rem;
-    font-family: Arial, Helvetica, sans-serif;
+    padding-top: -1rem
 }
 #welcome li{
   padding: .5rem;
+}
+@media (max-width:786px){
+    nav ul, #welcome{
+        flex-direction: column;
+    }
+    nav li{
+        padding: 0.4rem;
+    }
 }
 #project-section{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
     grid-gap: 20px;
-    justify-items: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
+    padding: 3rem;
+    
 }
 h3{
     text-align: center;
     color: white;
     font-size: 3rem;
     grid-column: 1 /-1;
-    font-family: Arial, Helvetica, sans-serif;
-    border-bottom: 2px solid tomato;
+    background-color: rgba(203, 203, 224, 0.712);
+    padding: 2rem;
 
 }
 .project {
     cursor: pointer;
-    margin-left: 2rem;
-    margin-right: 2rem;
     background-color: rosybrown;
 }
 .project h2 {
     text-align: center;
-    color: white;
-    font-size: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: underline;
+    color: rgba(227, 223, 233, 0.897);
+    font-size: 1.5rem;
 
 }
-.project p{
-    text-align: start;
+.project .project-detail p{
+    text-align: justify;
     padding: .5rem;
+    font-weight: 500;
     font-size: 1rem;
-    text-transform: capitalize;
-    font-style: italic;
-    line-height: 1.5;
+    line-height: 1.3;
+    color: rgba(12, 12, 46, 0.719);
 }
-.project a{
+.project .preview-link{
+    text-align: center;
+    padding: 2rem;
+}
+.project .preview-link a{
     color: white;
-    font-size: 1.8rem;
-    background-color: brown;
-
-}
-.project a:hover{
-    background-color: white;
     cursor: pointer;
-    color: red;
+    border: 2px solid brown;
+    padding: .7rem;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+.project .preview-link a:hover{
+    background-color: brown;
+    color: white;
+    transition: 2s;
+
 }
 img{
     width: 100%;
 }
 #contact{
-    width: 100%;
-    height: 50vh;
+    padding: 3rem;
     display: grid;
     justify-items: center;
     color: white;
@@ -141,10 +146,18 @@ img{
     color: sienna;
 }
 #link-section{
-    padding: 0%;
+    margin-top: 2rem;
 }
+
 #link-section a{
     color: white;
-    font-size: 2rem;
-    padding: 1rem;
+    font-size: 1.4rem;
+    padding: .7rem;
+}
+@media (max-width:786px){
+    #link-section{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
 }
